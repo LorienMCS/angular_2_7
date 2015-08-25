@@ -23,18 +23,20 @@
         <button type="submit" ng-click="addContact()" class="mediumbt">Add Contact</button>
       </form>
 
-      <label>Search<input ng-model="search.name"></label>
+      <label>Search By Name: <input ng-model="search.name"></label>
 
       <table>
         <tr>
           <th>Name</th>
           <th>Email</th>
           <th>Phone</th>
+          <th>Delete</th>
         </tr>
         <tr ng-repeat="person in contactData | filter:search">
           <td>{{person.name}}</td>
           <td>{{person.email}}</td>
           <td>{{person.phone}}</td>
+          <td><button type="submit" ng-click="deleteContact()" class="mediumbt">Delete</button></td>
         </tr>
       </table>
     </div>

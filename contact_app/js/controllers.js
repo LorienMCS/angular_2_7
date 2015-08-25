@@ -10,5 +10,9 @@ app.controller("ContactController", ["$scope", "ContactList", function($scope, C
 	  $scope.person = {};
 	};
 
+	$scope.deleteContact = function() {
+		ContactList.removeContact(ContactList.findContact($scope.person.name, 1));
+	};
+
 }]);
 

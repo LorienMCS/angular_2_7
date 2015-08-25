@@ -7,12 +7,17 @@ app.factory('ContactList', function() {
     ContactList.contactList.push(obj);
   };
 
-  ContactList.findContact = function(name) {
-    // TODO
+  ContactList.findContact = function(searchedName) {
+    var contactArr = ContactList.contactList;
+    for (var i=0; i < contactArr.length; i++) {
+        if (contactArr[i].name === searchedName) {
+            return myArray[i];
+        };
+    };
   };
 
   ContactList.removeContact = function(index) {
-    // TODO
+    ContactList.contactList.splice(index, 1);
   };
 
   return ContactList;
