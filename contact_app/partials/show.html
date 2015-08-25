@@ -1,3 +1,5 @@
 <h1>Show Page for {{person.name}}</h1>
 <p>{{person.name}}'s email address: {{person.email}}</p>
 <p>{{person.name}}'s phone number: {{person.phone}}</p>
+<div ng-hide="person.noGiphy"><img ng-src="{{person.giphy}}" alt="giphy of {{person.name}}"/></div>
+<p>{{person.error}}</p>

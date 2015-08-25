@@ -55,20 +55,17 @@ h1 {
 	padding: 10px;
 }
 
-.button {
-	font-size: 1em;
-	float: left;
-	margin: 20px 90px 20px 100px;
-	padding: 5px 8px 5px 8px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-}
-
 .mediumbt {
 	font-size: .8em;
-	padding: 3px 5px 3px 5px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
+	padding: 1px 10px 1px;
+	border: 5px ridge #0E6E61;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: -2px -2px 8px #003D3D;
+	box-shadow: 2px 2px 8px #003D3D;
+	text-decoration: none;
+	color: #000;
+	background-color: #C0E6E6;
 }
 
 table {
@@ -89,5 +86,18 @@ td, th {
 
 tr:nth-child(even) {
     background-color: lightgrey;
+}
+
+#delete {
+	font-size: .8em;
+	padding: 1px 10px 1px;
+	border: 5px ridge #A70000;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: -2px -2px 8px #003D3D;
+	box-shadow: 2px 2px 8px #003D3D;
+	text-decoration: none;
+	color: #000;
+	background-color: #FF4747;
 }
 

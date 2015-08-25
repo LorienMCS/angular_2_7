@@ -1,13 +1,26 @@
-app.controller("HomeController", ["$scope", "$location", "ContactList", function($scope, $location, ContactList){
+app.controller("HomeController", ["$scope", "$location", "ContactList", "GiphyService", function($scope, $location, ContactList, GiphyService){
 
 	// ContactList is service instance; ContactList.contactList is array in the service
 	$scope.contactData = ContactList.contactList;
 	$scope.person = {};
+	$scope.person.giphy = "";
+	$scope.person.noGiphy = false;
+	$scope.person.error = "";
 
 	$scope.addContact = function() {
-		// add person to service array
-	  ContactList.addContact($scope.person);
-	  $scope.person = {};
+		GiphyService.search($scope.person.name)
+		.then(function(obj) {
+			if(obj.data[0]!=undefined){
+				$scope.person.giphy = obj.data[0].images.fixed_height.url;
+				ContactList.addContact($scope.person);
+				$scope.person = {};
+			} else {
+				$scope.person.noGiphy = true;
+				$scope.person.error = "Sorry, no giphy for you!"
+				ContactList.addContact($scope.person);
+				$scope.person = {};
+			}
+		});
 	};
 
 	$scope.deleteContact = function() {

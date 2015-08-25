@@ -3,61 +3,8 @@
 ####EXERCISE:** Name at least 3 angular built in services that we have used so far.
 #####$http, $location, $routeParams
 
-Now that we are more comfortable using services and injecting a service as dependency, let's create our own.  In your contact app, add the following code to `service.js`:
-
-```js
-app.factory('ContactList', function() {
-  var ContactList = {};
-
-  ContactList.contactList = [];
-
-  ContactList.addContact = function(name, email, phone) {
-    contactList.data.push(name: name, email: email, phone: phone);
-  };
-
-  ContactList.findContact = function(name) {
-    // TODO
-  };
-
-  ContactList.removeContact = function(index) {
-    // TODO
-  };
-
-  return ContactList;
-});
-```
-
-Now in your controller you can add the contact service you created as a dependency.  For example, your controller might look like this:
-
-```js
-app.controller('ContactController', ["$scope", "ContactList", function($scope, ContactList){
-   $scope.contactData = ContactList.contactList;
-
-   // TODO: Your ContactList controller code here.
-}]);
-```
-
-**EXERCISE:** Refactor your contacts app to use a ContactList service.  Remember to stick with best practices and use the inline array annotation.
-
-**EXERCISE:** Add a show page to your contacts app. This will require a separate controller but you can use the same ContactList service and share it between controllers. The "id" for the show page should by the index of contact in the contactList.
-
-#### Deferreds and Promises
-
-In jQuery you saw promises often.  The most common use case was an ajax call.  For example, you might have some code like this in jQuery:
-
-```js
-$.get("/puppies").done(function() {
-  // do something here
-}).fail(function() {
-  // do something here
-});
-```
-
-The object returned from the `$.get` method is a promise that can then be chained to other method calls when certain events take place.  You can think of a promise as a more generalized way of implementing a callback.
-
-Another popular library for promises is [q](https://github.com/kriskowal/q)
-
-**EXERCISE:** Read the docs for [the q promise library](https://github.com/kriskowal/q).  Why would you prefer to use a promise over a callback?  What advantage does it have?
+####EXERCISE: Read the docs for [the q promise library](https://github.com/kriskowal/q).  Why would you prefer to use a promise over a callback?  What advantage does it have?
+#####Promises almost feel sychronous; they are easier to chain, error-handling is cleaner, and it's easier to create reusable code.
 
 #### Creating a Service With Dependencies
 
