@@ -11,7 +11,7 @@ app.factory('ContactList', function() {
     var contactArr = ContactList.contactList;
     for (var i=0; i < contactArr.length; i++) {
         if (contactArr[i].name === searchedName) {
-            return myArray[i];
+            return contactArr[i];
         };
     };
   };

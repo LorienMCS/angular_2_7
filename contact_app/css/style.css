@@ -43,61 +43,16 @@ body {
 h1 {
 	margin: 0 0 10px;
 	padding: 5px 10px 15px 10px;
+	color: #0E6E61;
 	font-size: 2.4em;
 	text-align: center;
+	text-shadow: 1px 1px 1px #219183;
 }
 
  .app {
 	float: left;
 	margin: 20px 32px;
 	padding: 10px;
-}
-
-#playerone, #playertwo {
-	float: left;
-	margin: 0 10px;
-	height: 300px;
-	width: 400px;
-}
-
-.noWinner {
-	background-color: blue;
-}
-
-.oneWinner {
-	background-color: green;
-}
-
-.oneLoser {
-	background-color: red;
-}
-
-.twoWinner {
-	background-color: green;
-}
-
-.twoLoser {
-	background-color: red;
-}
-
-.player, .score, .server{
-	color: white;
-	text-align: center;
-}
-
-.player  {
-	font-size: 2em;
-	padding: 10px 0 60px;
-}
-
-.score {
-	font-size: 8em;
-	padding: 20px 0 60px;
-}
-
-.server {
-	font-size: 1em;
-	padding: 20px;
 }
 
 .button {

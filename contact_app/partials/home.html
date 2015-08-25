@@ -1,0 +1,31 @@
+<div class="app">
+  <h1>Contact List</h1>
+  <form>
+    <label for="name">Name</label>
+    <input ng-model="person.name" id="name" placeholder="name">
+    <label for="email">Email</label>
+    <input ng-model="person.email" id="email" placeholder="email">
+    <label for="phone">Phone</label>
+    <input ng-model="person.phone" id="phone" placeholder="phone">
+    <button type="submit" ng-click="addContact()" class="mediumbt">Add Contact</button>
+  </form>
+
+  <label>Search By Name: <input ng-model="search.name"></label>
+
+  <table>
+    <tr>
+      <th>Details</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Delete</th>
+    </tr>
+    <tr ng-repeat="person in contactData | filter:search">
+      <td><button type="submit" ng-click="showContact(person)" class="mediumbt">Details</button></td>
+      <td>{{person.name}}</td>
+      <td>{{person.email}}</td>
+      <td>{{person.phone}}</td>
+      <td><button type="submit" ng-click="deleteContact()" class="mediumbt" id="delete">Delete</button></td>
+    </tr>
+  </table>
+</div>
