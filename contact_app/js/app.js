@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
         controller: 'HomeController'
       })
       .when('/:id/show', {
-        templateUrl: '/partials/show.html',
+        templateUrl: 'partials/show.html',
         controller: 'ShowController'
       }).otherwise({
       	redirectTo: '/'
