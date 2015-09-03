@@ -1,6 +1,6 @@
 #####:sunny: :palm_tree: :evergreen_tree:[Demo of my completed assignment](http://lorienmcs.github.io/angular_2_7/contact_app/#/):evergreen_tree: :palm_tree: :sunny:
 
-#####This was a project for the 18th week of the Full Stack Program at [Galvanize](http://www.galvanize.com/courses/full-stack/). The goal was to make a simple contact list, and use the Giphy API to add a gif based on a search of the user's first name to the show page.
+#####This was a project for the 18th week of the Full Stack Program at [Galvanize](http://www.galvanize.com/courses/full-stack/). The goal was to make a simple contact list, and use the Giphy API to add a gif based on a search of a person's first name to the show page.
 
 
 ### Services
